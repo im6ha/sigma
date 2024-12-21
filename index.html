@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sigma Web</title>
+        <style>
+            #message {
+                font-size: 24px; /* Default font size */
+                font-weight: bold;
+                text-align: center;
+                margin-top: 20px;
+            }
+            #bigMessage {
+                font-size: 60px; /* Bigger font size */
+                font-weight: bold;
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body style = "background-color:rgb(224, 155, 26)" style = "text-decoration-color: aqua;">
+    <h1>Welcome to the Sigma Boys Webpage!</h1> <br>
+    <h3>Here you will find the fellow sigma boys</h3> <br>
+    <center>
+    <img src = "1725172042894.jpg" height = "300" width = "200" border = "20"> </center>
+    <hr>
+    <center><a href="sigma.html" target = "_blank"><h1>Click to enter the premium sigma webpage</h1></a>
+    <p>Click</p>
+    <button id="clickButton">Here!</button>
+    <h4>if you are a sigma boy!<h4>
+    </center>
+    <!-- Placeholder for the colorful message -->
+    <div id="message"></div>
+    <center><video src = "videoplayback.mp4" height ="900" width = "900" autoplay loop > granny </video></center>
+
+    <script>
+        // Get the button and message container
+        const button = document.getElementById('clickButton');
+        const messageDiv = document.getElementById('message');
+
+        // Function to display the colorful message
+        function showMessage() {
+            const message = "WOW YOU ARE A SIGMAAAAAAAAA";
+            let colorfulText = '';
+
+            // Loop through each letter to assign a random color
+            for (let char of message) {
+                const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                colorfulText += `<span style="color: ${randomColor}">${char}</span>`;
+            }
+
+            // Set the colorful message
+            messageDiv.innerHTML = colorfulText;
+        }
+
+        // Attach event listener to the button
+        button.addEventListener('click', showMessage);
+    </script>
+    
+
+   </body>
+</html>
